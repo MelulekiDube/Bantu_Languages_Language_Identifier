@@ -1,13 +1,13 @@
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,7 +24,6 @@ public class NgramCreator implements Runnable {
 
     File currentFile;
     File ngramFile;
-
     NgramCreator(File f) {
         currentFile = f.listFiles()[0];
         ngramFile = new File(f.getAbsolutePath() + "/ngram");
@@ -40,22 +39,30 @@ public class NgramCreator implements Runnable {
     @Override
     public void run() {
         try {
-            Scanner fileRead = new Scanner(currentFile);
-            String line;
-            System.setOut(new PrintStream(ngramFile));
-            while (fileRead.hasNextLine()) {
-                line = fileRead.nextLine();
-                List<String> ngrams = ngramFromLine(line);
-                ngrams.forEach((tempNgram) -> {
-                    System.out.println(tempNgram);
-                });
+            try (BufferedReader fileRead = new BufferedReader(new FileReader(currentFile))) {
+                String token;
+                try (BufferedWriter bw = new BufferedWriter(new FileWriter(ngramFile))) {
+                    token= fileRead.readLine();
+                    while (token!=null) {
+                        List<String> ngrams = ngramFromLine(token);
+                        ngrams.forEach((tempNgram) -> {
+                            try {
+                                bw.write(tempNgram + "\n");
+                            } catch (IOException ex) {
+                                Logger.getLogger(NgramCreator.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        });
+                        token= fileRead.readLine();
+                    }
+                }
             }
-            System.setOut(System.out);
-
         } catch (FileNotFoundException ex) {
             System.setOut(System.out);
             System.out.println(ex);
+        } catch (IOException ex) {
+            Logger.getLogger(NgramCreator.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
 
     /**
@@ -68,11 +75,11 @@ public class NgramCreator implements Runnable {
      */
     private List<String> ngramFromLine(String stringToConvert) {
         List<String> tempList = new ArrayList<>();
-        for (int i = 0; (i + 3) < stringToConvert.length(); i++) {
+        for (int i = 1;i < stringToConvert.length()-3; i++) {
             String temp = stringToConvert.substring(i, i + 3);
             tempList.add(temp);
         }
-        tempList.add(stringToConvert.substring(stringToConvert.length()-3));
+        tempList.add(stringToConvert.substring(stringToConvert.length() - 3));
         return tempList;
     }
 

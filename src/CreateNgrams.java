@@ -41,12 +41,13 @@ public class CreateNgrams {
 
     public void perfomCreation() {
         ExecutorService es = Executors.newFixedThreadPool(languages.length);
-        for(File f:languages){
-            es.submit(new NgramCreator (f));
+        for (File f : languages) {
+            es.submit(new NgramCreator(f));
         }
         es.shutdown();
     }
-    public static void main(String []args){
+
+    public static void main(String[] args) {
         CreateNgrams cn=  new CreateNgrams();
         cn.perfomCreation();
     }
