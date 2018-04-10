@@ -17,11 +17,11 @@ import java.util.Scanner;
  *
  * @author Meluleki
  */
-public class Language_Model {
+public class Profile {
 
     private final HashMap<String, Integer> unsortedNgrams;
 
-    public Language_Model() {
+    public Profile() {
         unsortedNgrams = new HashMap<>();
     }
 
@@ -31,7 +31,7 @@ public class Language_Model {
      *
      * @param filePath
      */
-    public Language_Model(String filePath) {
+    public Profile(String filePath) {
         unsortedNgrams = new HashMap<>();
         generateModel(filePath);
     }

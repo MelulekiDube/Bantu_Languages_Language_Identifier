@@ -1,7 +1,5 @@
-
 import java.io.File;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -16,7 +14,7 @@ import java.util.concurrent.Executors;
  */
 public class CreateNgrams {
 
-    private final Map<String, String> fileMatchings;
+    private final HashMap<String, String> fileMatchings;
     File file;
     File[] languages;
 
@@ -38,7 +36,9 @@ public class CreateNgrams {
         fileMatchings.put("tn", "Setswana");
         fileMatchings.put("ss", "Siswati");
     }
-
+    public String getLanguage(String code){
+        return fileMatchings.get(code);
+    }
     public void perfomCreation() {
         ExecutorService es = Executors.newFixedThreadPool(languages.length);
         for (File f : languages) {
