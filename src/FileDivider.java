@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 public class FileDivider {
 
     public String language_name;
-    private static int singleDivision, current_start_of_test;
+    public int singleDivision, current_start_of_test;
 
     public FileDivider(String lcode_lname) {
         language_name = lcode_lname;
@@ -33,6 +33,7 @@ public class FileDivider {
 
     public void calculateDivisions() {
         File fmain = new File(Values.DEFAULT_DIREC + "/" + language_name);
+        System.out.println("Dividing the file found at: "+ fmain.getAbsolutePath());
         fmain = fmain.listFiles()[0];
         int charCount = 0;
 
@@ -49,16 +50,10 @@ public class FileDivider {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(FileDivider.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println(charCount);
-        singleDivision = (charCount / 10);
+        System.out.println("Chunk size: "+charCount);
+        singleDivision = (charCount / 1000000);
     }
     public int getsingleDivisionSize(){
         return singleDivision;
-    }
-            
-    public static void main(String[] args) {
-        FileDivider nc = new FileDivider("Ndebele");
-        nc.calculateDivisions();
-        System.out.println();
     }
 }

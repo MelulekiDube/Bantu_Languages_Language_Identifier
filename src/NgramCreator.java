@@ -1,7 +1,6 @@
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,14 +24,12 @@ public class NgramCreator implements Runnable {
     Profile model_profile;
     Profile testing_profile;
     boolean test_flag;
-    FileDivider fd;
 
     NgramCreator(File f, Profile pr) {
         currentFile = f.listFiles()[0];
         model_profile = pr;
         testing_profile = null;
         test_flag = false;
-        fd = null;
     }
 
     public NgramCreator(File f, Profile model_profile, Profile testing_profile) {
@@ -40,7 +37,6 @@ public class NgramCreator implements Runnable {
         this.model_profile = model_profile;
         this.testing_profile = testing_profile;
         test_flag = true;
-        fd = new FileDivider(model_profile.language_represented);
     }
 
     @Override
@@ -54,29 +50,31 @@ public class NgramCreator implements Runnable {
     }
 
     private void produceTrainingAndTesting() {
-        int tempStartTesting = fd.get_start_of_Test();
+        int tempStartTesting = testing_profile.start_of_testing;
         try {
             BufferedReader fileBufferedReader = new BufferedReader(new FileReader(currentFile));
-            String token;
-            token = fileBufferedReader.readLine();
-            int count = 0;
+
+            String token = fileBufferedReader.readLine();
+            int count = tempStartTesting;
             while (token != null) {
-                List<String> ngrams = ngramFromLine(token);
-                for (String tempNgram : ngrams) {
-                    if (count == tempStartTesting)//we are at the start of the testing data
-                    {
-                        testing_profile.insert(tempNgram);
-                    } else if (count < tempStartTesting)// we haven't started reading the testing data
-                    {
-                        model_profile.insert(tempNgram);
-                    } else if ((count > tempStartTesting) && (count < (tempStartTesting + fd.getsingleDivisionSize())))//then we are inbetween the testing data
-                    {
-                        testing_profile.insert(tempNgram);
-                    } else {
-                        model_profile.insert(tempNgram);
+                boolean write_to_test = (((count >= tempStartTesting) && (count <(tempStartTesting + testing_profile.singleDivision))));
+                while (write_to_test) {
+                    System.out.println("Reading cha: "+count);
+                    char[] tempArr = token.toCharArray();
+                    String testing_chunk = "";
+                    for (char c : tempArr) {
+                        testing_chunk += c;
+                        token = token.replaceFirst(c + "", "");
+                        count++;
+                        write_to_test = ((count == tempStartTesting) || (count >= tempStartTesting) && (count <= (tempStartTesting + testing_profile.singleDivision)));
+                        if (!write_to_test) {
+                            write_to_profile(testing_chunk, "T");
+                            break;
+                        }
                     }
                 }
-                count += token.toCharArray().length;
+                count+=token.toCharArray().length;
+                write_to_profile(token, "M");
                 token = fileBufferedReader.readLine();
             }
         } catch (IOException ex) {
@@ -85,16 +83,24 @@ public class NgramCreator implements Runnable {
         testing_profile.sortHashMap();
     }
 
+    void write_to_profile(String token, String p) {
+        List<String> ngrams = ngramFromLine(token);
+        ngrams.forEach((tempNgram) -> {
+            if (p.equals("M")) {
+                model_profile.insert(tempNgram);
+            } else {
+                testing_profile.insert(tempNgram);
+            }
+        });
+    }
+
     void producemodelOnly() {
         try {
             try (BufferedReader fileRead = new BufferedReader(new FileReader(currentFile))) {
                 String token;
                 token = fileRead.readLine();
                 while (token != null) {
-                    List<String> ngrams = ngramFromLine(token);
-                    ngrams.forEach((tempNgram) -> {
-                        model_profile.insert(tempNgram);
-                    });
+                    write_to_profile(token, "M");
                     token = fileRead.readLine();
                 }
             }

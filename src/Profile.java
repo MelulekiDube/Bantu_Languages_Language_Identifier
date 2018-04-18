@@ -19,7 +19,7 @@ import java.util.Map;
 public class Profile {
 
     public final LinkedHashMap<String, Integer> frequencyTable;
-    private int start_of_testing;
+    public int start_of_testing, singleDivision;
     boolean lang_of_int_flag;
     public String language_represented;
 
@@ -72,7 +72,6 @@ public class Profile {
 
     public void printFirstTen() {
         int a = 0;
-        List<Map.Entry<String, Integer>> unsortedNGramsList = new LinkedList<>(frequencyTable.entrySet());
         for (Map.Entry<String, Integer> temp : frequencyTable.entrySet()) {
             System.out.println(temp.getKey() + " " + temp.getValue());
             a++;
@@ -95,18 +94,21 @@ public class Profile {
         List<String> testing_profile_ngrams = new ArrayList<>(testing_profile.frequencyTable.keySet());
         int currentIndex = 0;
         int distance_between_profiles = 0;
+        boolean found=false;
         for (String tempNgram : testing_profile_ngrams) {
-            if(currentIndex>300) return distance_between_profiles;
-            int innerindex=0;
+            if(!found) distance_between_profiles+=testing_profile_ngrams.size()+1;
+            found= false;
+            int innerindex = 0;
             for (String temp : profile_ngrams) {
-//                System.out.println("Comparing " +temp +" and "+tempNgram);
                 if (tempNgram.equals(temp)) {
                     distance_between_profiles += Math.abs(innerindex-currentIndex);
+                    found= true;
                     break;
                 } 
                 innerindex++;
             }
             currentIndex++;
+            if(currentIndex>300)return distance_between_profiles;
         }
         return distance_between_profiles;
     }
