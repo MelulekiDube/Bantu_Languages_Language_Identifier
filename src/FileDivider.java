@@ -51,7 +51,7 @@ public class FileDivider {
             Logger.getLogger(FileDivider.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("Chunk size: "+charCount);
-        singleDivision = (charCount / 1000000);
+        singleDivision = (charCount /10);
     }
     public int getsingleDivisionSize(){
         return singleDivision;

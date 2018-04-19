@@ -20,8 +20,8 @@ public class Profile {
 
     public final LinkedHashMap<String, Integer> frequencyTable;
     public int start_of_testing, singleDivision;
-    boolean lang_of_int_flag;
     public String language_represented;
+    int testing_chunk_size = 0;
 
     /**
      * Default constructor that sets up the profile parameters
@@ -92,23 +92,34 @@ public class Profile {
     public int compareProfiles(Profile testing_profile) {
         List<String> profile_ngrams = new ArrayList<>(frequencyTable.keySet());
         List<String> testing_profile_ngrams = new ArrayList<>(testing_profile.frequencyTable.keySet());
-        int currentIndex = 0;
+        int limit= (testing_profile_ngrams.size()>300) ?300:testing_profile_ngrams.size();
         int distance_between_profiles = 0;
-        boolean found=false;
-        for (String tempNgram : testing_profile_ngrams) {
-            if(!found) distance_between_profiles+=testing_profile_ngrams.size()+1;
-            found= false;
-            int innerindex = 0;
-            for (String temp : profile_ngrams) {
-                if (tempNgram.equals(temp)) {
-                    distance_between_profiles += Math.abs(innerindex-currentIndex);
-                    found= true;
-                    break;
-                } 
-                innerindex++;
+        boolean found = false;
+        try {
+            for (int i = 0; i < limit; i++) {
+//                System.out.println("==================================");
+                found = false;
+                for (int j = 0; j < limit; j++) {
+                    if (testing_profile_ngrams.get(i).equals(profile_ngrams.get(j))) {
+//                        System.out.println("Comparing " + testing_profile_ngrams.get(i) + " to " + profile_ngrams.get(j));
+                        distance_between_profiles += (Math.abs(j - i));
+                        found = true;
+                    }
+                }
+                if (!found) {
+                    distance_between_profiles += 300;
+                }
             }
-            currentIndex++;
-            if(currentIndex>300)return distance_between_profiles;
+        } catch (Exception ex) {
+            System.out.println("Error is "+ex.getMessage());
+            for (StackTraceElement t : ex.getStackTrace()) {
+                System.out.println("================");
+                System.out.println("Error on File: " + t.getFileName());
+                System.out.println("Error on File: " + t.getClassName());
+                System.out.println("Error on File: " + t.getMethodName());
+                System.out.println("Error on File: " + t.getLineNumber());
+                System.out.println("================");
+            }
         }
         return distance_between_profiles;
     }

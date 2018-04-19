@@ -26,6 +26,7 @@ public class Experiment {
     Profile testingProfile;
     FileDivider fd;
     private static int a = 0;
+    private static int size;
 
     public Experiment(String language) {
         this.rootFile = new File(Values.DEFAULT_DIREC);
@@ -42,24 +43,24 @@ public class Experiment {
             profiles[i] = new Profile(f.getName());
             i++;
         }
+        size = 0;
     }
 
     void startExperiment() {
-        ExecutorService es = Executors.newFixedThreadPool(languages.length / 2);
+        ExecutorService es = Executors.newFixedThreadPool(languages.length);
         int i = 0;
         testingProfile.start_of_testing += ((a * testingProfile.singleDivision));
         for (File f : languages) {
-            profiles[i].frequencyTable.clear();
             if (!f.getName().equals(language_being_tested)) {
                 es.submit(new NgramCreator(f, profiles[i]));
             } else {
-                es.submit(new NgramCreator(f, profiles[i], testingProfile));
+                testingProfile.testing_chunk_size = 500;
+                es.submit(new TestModelCreator(f, profiles[i], testingProfile));
             }
             i++;
         }
         es.shutdown();
         try {
-            System.out.println("Waiting for es to shutdown");
             es.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
         } catch (InterruptedException ex) {
             Logger.getLogger(Experiment.class.getName()).log(Level.SEVERE, null, ex);
@@ -69,14 +70,14 @@ public class Experiment {
 
     void performTesting() {
         Pair<Profile, Integer> result = new Pair(testingProfile, Integer.MAX_VALUE);
-        int accuracy = 0;
+        double accuracy = 0;
         int i = 0;
-        for (; i < 9; i++) {
+        for (; i < 10; i++) {
+            result = new Pair(testingProfile, Integer.MAX_VALUE);
             startExperiment();
             System.out.println("======================================================");
-            testingProfile.printFirstTen();
-            System.out.println("======================================================");
             for (Profile p : profiles) {
+                System.out.println("Comparing with: " + p.language_represented + " " + p.compareProfiles(testingProfile));
                 if (p.compareProfiles(testingProfile) < result.getValue()) {
                     result = new Pair<>(p, p.compareProfiles(testingProfile));
                 }
@@ -85,14 +86,20 @@ public class Experiment {
             if (result.getKey().language_represented.equals(language_being_tested)) {
                 accuracy++;
             }
+            System.out.println("======================================================");
         }
-        System.out.println("Accuracy is: " + ((accuracy / 1) * 100));
+        System.out.println("Accuracy is: " + ((double)(accuracy / 9) * 100));
     }
 
     public static void main(String[] args) {
-        Experiment e = new Experiment("Xhosa");
-        System.out.println(e.testingProfile.singleDivision);
-        System.out.println("Exp 1");
-        e.performTesting();
+        try {
+            Experiment e = new Experiment("Xhosa");
+            size = 500;
+            System.out.println(e.testingProfile.singleDivision);
+//        System.out.println("Exp 1");
+            e.performTesting();
+        } catch (Exception e) {
+            e.getStackTrace()[0].getMethodName();
+        }
     }
 }

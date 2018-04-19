@@ -5,8 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,78 +17,43 @@ import java.util.logging.Logger;
  */
 public class NgramCreator implements Runnable {
 
-    File currentFile;
-    File ngramFile;
-    Profile model_profile;
-    Profile testing_profile;
-    boolean test_flag;
+    private File currentFile;
+    private File ngramFile;
+    private Profile model_profile;
 
     NgramCreator(File f, Profile pr) {
         currentFile = f.listFiles()[0];
         model_profile = pr;
-        testing_profile = null;
-        test_flag = false;
-    }
-
-    public NgramCreator(File f, Profile model_profile, Profile testing_profile) {
-        this.currentFile = f.listFiles()[0];
-        this.model_profile = model_profile;
-        this.testing_profile = testing_profile;
-        test_flag = true;
     }
 
     @Override
     public void run() {
-        if (test_flag) {
-            produceTrainingAndTesting();
-        } else {
-            producemodelOnly();
-        }
-        model_profile.sortHashMap();
-    }
-
-    private void produceTrainingAndTesting() {
-        int tempStartTesting = testing_profile.start_of_testing;
+        model_profile.frequencyTable.clear();
+//        if (testing_profile != null) {
+//            produceTrainingAndTesting();
+//        } else {
         try {
-            BufferedReader fileBufferedReader = new BufferedReader(new FileReader(currentFile));
-
-            String token = fileBufferedReader.readLine();
-            int count = tempStartTesting;
-            while (token != null) {
-                boolean write_to_test = (((count >= tempStartTesting) && (count <(tempStartTesting + testing_profile.singleDivision))));
-                while (write_to_test) {
-                    System.out.println("Reading cha: "+count);
-                    char[] tempArr = token.toCharArray();
-                    String testing_chunk = "";
-                    for (char c : tempArr) {
-                        testing_chunk += c;
-                        token = token.replaceFirst(c + "", "");
-                        count++;
-                        write_to_test = ((count == tempStartTesting) || (count >= tempStartTesting) && (count <= (tempStartTesting + testing_profile.singleDivision)));
-                        if (!write_to_test) {
-                            write_to_profile(testing_chunk, "T");
-                            break;
-                        }
-                    }
-                }
-                count+=token.toCharArray().length;
-                write_to_profile(token, "M");
-                token = fileBufferedReader.readLine();
+            producemodelOnly();
+        } catch (Exception ex) {
+            System.out.println("Error is " + ex.getMessage());
+            for (StackTraceElement t : ex.getStackTrace()) {
+                System.out.println("================");
+                System.out.println("Error on File: " + t.getFileName());
+                System.out.println("Error on File: " + t.getClassName());
+                System.out.println("Error on File: " + t.getMethodName());
+                System.out.println("Error on File: " + t.getLineNumber());
+                System.out.println("================");
             }
-        } catch (IOException ex) {
-            Logger.getLogger(NgramCreator.class.getName()).log(Level.SEVERE, null, ex);
         }
-        testing_profile.sortHashMap();
+//        }
+        model_profile.sortHashMap();
     }
 
     void write_to_profile(String token, String p) {
         List<String> ngrams = ngramFromLine(token);
         ngrams.forEach((tempNgram) -> {
-            if (p.equals("M")) {
-                model_profile.insert(tempNgram);
-            } else {
-                testing_profile.insert(tempNgram);
-            }
+            model_profile.insert(tempNgram);
+
         });
     }
 
@@ -105,7 +68,6 @@ public class NgramCreator implements Runnable {
                 }
             }
         } catch (IOException ex) {
-            System.out.println(ex);
         }
     }
 
@@ -119,11 +81,13 @@ public class NgramCreator implements Runnable {
      */
     private List<String> ngramFromLine(String stringToConvert) {
         List<String> tempList = new ArrayList<>();
-        for (int i = 1; i < stringToConvert.length() - 3; i++) {
-            String temp = stringToConvert.substring(i, i + 3);
-            tempList.add(temp);
+        if (stringToConvert.length() >= 3) {
+            for (int i = 1; i < stringToConvert.length() - 3; i++) {
+                String temp = stringToConvert.substring(i, i + 3);
+                tempList.add(temp);
+            }
+            tempList.add(stringToConvert.substring(stringToConvert.length() - 3));
         }
-        tempList.add(stringToConvert.substring(stringToConvert.length() - 3));
         return tempList;
     }
 
