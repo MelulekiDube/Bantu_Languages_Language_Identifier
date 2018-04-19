@@ -26,9 +26,9 @@ public class Experiment {
     Profile testingProfile;
     FileDivider fd;
     private static int a = 0;
-    private static int size;
+    int size;
 
-    public Experiment(String language) {
+    public Experiment(String language, int s) {
         this.rootFile = new File(Values.DEFAULT_DIREC);
         this.profiles = new Profile[9];
         this.languages = rootFile.listFiles();
@@ -43,7 +43,7 @@ public class Experiment {
             profiles[i] = new Profile(f.getName());
             i++;
         }
-        size = 0;
+        size = s;
     }
 
     void startExperiment() {
@@ -54,7 +54,7 @@ public class Experiment {
             if (!f.getName().equals(language_being_tested)) {
                 es.submit(new NgramCreator(f, profiles[i]));
             } else {
-                testingProfile.testing_chunk_size = 500;
+                testingProfile.testing_chunk_size = size;
                 es.submit(new TestModelCreator(f, profiles[i], testingProfile));
             }
             i++;
@@ -68,38 +68,27 @@ public class Experiment {
         a = 1;
     }
 
-    void performTesting() {
+    float performTesting() {
         Pair<Profile, Integer> result = new Pair(testingProfile, Integer.MAX_VALUE);
-        double accuracy = 0;
+        float accuracy = 0;
         int i = 0;
+//        System.out.println("======================================================");
         for (; i < 10; i++) {
             result = new Pair(testingProfile, Integer.MAX_VALUE);
             startExperiment();
-            System.out.println("======================================================");
+//            System.out.println("======================================================");
             for (Profile p : profiles) {
-                System.out.println("Comparing with: " + p.language_represented + " " + p.compareProfiles(testingProfile));
+//                System.out.println("Comparing with: " + p.language_represented + " " + p.compareProfiles(testingProfile));
                 if (p.compareProfiles(testingProfile) < result.getValue()) {
                     result = new Pair<>(p, p.compareProfiles(testingProfile));
                 }
             }
-            System.out.println("Predicted language is: " + result.getKey().language_represented);
+//            System.out.println("Predicted language is: " + result.getKey().language_represented);
             if (result.getKey().language_represented.equals(language_being_tested)) {
                 accuracy++;
             }
-            System.out.println("======================================================");
         }
-        System.out.println("Accuracy is: " + ((double)(accuracy / 9) * 100));
-    }
-
-    public static void main(String[] args) {
-        try {
-            Experiment e = new Experiment("Xhosa");
-            size = 500;
-            System.out.println(e.testingProfile.singleDivision);
-//        System.out.println("Exp 1");
-            e.performTesting();
-        } catch (Exception e) {
-            e.getStackTrace()[0].getMethodName();
-        }
+//        System.out.println(((float)(accuracy/10)*100));
+        return (float) (accuracy / i) * 100;
     }
 }
