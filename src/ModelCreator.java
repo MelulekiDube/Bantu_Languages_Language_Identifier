@@ -81,10 +81,9 @@ public class ModelCreator implements Runnable {
     /**
      * Converts the string into a list of ngrams characters and returns the
      * string
-     *
-     * @param stringToConvert which is the srting which is going to be converted
+     * @param stringToConvert which is the string which is going to be converted
      * to trigrams
-     * @return list of ngram charecters produced from the string
+     * @return list of ngram characters produced from the string
      */
     private List<String> ngramFromLine(String stringToConvert) {
         List<String> tempList = new ArrayList<>();
