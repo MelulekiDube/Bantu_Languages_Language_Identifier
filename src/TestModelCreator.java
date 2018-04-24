@@ -2,7 +2,6 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +10,6 @@ import java.util.List;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Meluleki
@@ -41,16 +39,17 @@ public class TestModelCreator implements Runnable {
         int tempStartTesting = testing_profile.start_of_testing;
         int tempEndTesting = testing_profile.singleDivision + tempStartTesting;
         int charecters_written_to_testing_model = 0;
+        int char_counter = 0;
         try {
             BufferedReader fileBufferedReader = new BufferedReader(new FileReader(currentFile));
             String token = fileBufferedReader.readLine();
             int count = 0;
             String testing_chunk = "";
             while (token != null) {
+                String model_chunk = "";
 //                System.out.println("Reading line: " + temp);
                 boolean write_to_test = ((count >= tempStartTesting && count < tempEndTesting));
                 char[] tempArr = token.toCharArray();
-
 //                System.out.println(token);
                 if (write_to_test) {
                     for (char c : tempArr) {
@@ -62,7 +61,15 @@ public class TestModelCreator implements Runnable {
                         write_to_test = ((count >= tempStartTesting && count < tempEndTesting));
                         if (!write_to_test) {
                             write_to_profile(testing_chunk, "T");
-                            write_to_profile(token, "M");
+                            for (char ct : token.toCharArray()) {
+                                if (model_profile.num_items_in_model <= char_counter) {
+                                    char_counter++;
+                                    model_chunk += c;
+                                } else {
+                                    write_to_profile(model_chunk, "M");
+                                    break;
+                                }
+                            }
                             testing_chunk = "";
 //                            System.out.println(testing_chunk);
                             break;
@@ -71,7 +78,10 @@ public class TestModelCreator implements Runnable {
                 } else {
                     String model_chunk_data = "";
                     for (char c : tempArr) {
-                        model_chunk_data += c;
+                        if (char_counter <= model_profile.num_items_in_model) {
+                            model_chunk_data += c;
+                            char_counter++;
+                        }
 //                        token = token.replaceFirst(c + "", "");
                         count++;
                         write_to_test = ((count >= tempStartTesting && count < tempEndTesting));

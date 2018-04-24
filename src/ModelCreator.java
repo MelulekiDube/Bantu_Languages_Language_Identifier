@@ -15,13 +15,13 @@ import java.util.List;
  *
  * @author Meluleki
  */
-public class NgramCreator implements Runnable {
+public class ModelCreator implements Runnable {
 
     private File currentFile;
     private File ngramFile;
     private Profile model_profile;
 
-    NgramCreator(File f, Profile pr) {
+    ModelCreator(File f, Profile pr) {
         currentFile = f.listFiles()[0];
         model_profile = pr;
     }
@@ -29,9 +29,6 @@ public class NgramCreator implements Runnable {
     @Override
     public void run() {
         model_profile.frequencyTable.clear();
-//        if (testing_profile != null) {
-//            produceTrainingAndTesting();
-//        } else {
         try {
             producemodelOnly();
         } catch (Exception ex) {
@@ -45,11 +42,10 @@ public class NgramCreator implements Runnable {
                 System.out.println("================");
             }
         }
-//        }
         model_profile.sortHashMap();
     }
 
-    void write_to_profile(String token, String p) {
+    void write_to_profile(String token) {
         List<String> ngrams = ngramFromLine(token);
         ngrams.forEach((tempNgram) -> {
             model_profile.insert(tempNgram);
@@ -58,16 +54,27 @@ public class NgramCreator implements Runnable {
     }
 
     void producemodelOnly() {
+        int char_counter = 0;
         try {
             try (BufferedReader fileRead = new BufferedReader(new FileReader(currentFile))) {
                 String token;
                 token = fileRead.readLine();
                 while (token != null) {
-                    write_to_profile(token, "M");
+                    String modelData = "";
+                    for (char c : token.toCharArray()) {
+                        if (char_counter <= model_profile.num_items_in_model) {
+                            char_counter++;
+                            modelData += c;
+                        } else {
+                            break;
+                        }
+                    }
+                    write_to_profile(modelData);
                     token = fileRead.readLine();
                 }
             }
         } catch (IOException ex) {
+            System.err.println(ex.toString());
         }
     }
 

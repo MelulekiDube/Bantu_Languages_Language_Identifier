@@ -1,5 +1,8 @@
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -27,8 +30,16 @@ public class Experiment {
     FileDivider fd;
     private static int a = 0;
     int size;
+    File f;
+    BufferedWriter bw;
 
-    public Experiment(String language, int s) {
+    /**
+     * 
+     * @param language the language to be tested by the experiment
+     * @param ts which is the test size
+     * @param ms the model size. This is the size of the models through out the model.
+     */
+    public Experiment(String language, int ts, int ms) {
         this.rootFile = new File(Values.DEFAULT_DIREC);
         this.profiles = new Profile[9];
         this.languages = rootFile.listFiles();
@@ -39,23 +50,44 @@ public class Experiment {
         int i = 0;
         testingProfile.singleDivision = fd.singleDivision;
         testingProfile.start_of_testing = fd.current_start_of_test;
-        for (File f : languages) {
-            profiles[i] = new Profile(f.getName());
+        for (File file : languages) {
+            profiles[i] = new Profile(file.getName());
+            profiles[i].num_items_in_model=ms;
             i++;
         }
-        size = s;
+        size = ts;
+        f = new File("result/"+language+"test_result");
+        FileWriter fw;
+        try {
+            if (!f.exists()) {
+                if (!f.getParentFile().exists()) {
+                    f.getParentFile().mkdir();
+                }
+                f.createNewFile();
+                fw = new FileWriter(f);
+            } else {
+                fw = new FileWriter(f, true);
+            }
+            bw = new BufferedWriter(fw);
+            bw.write("=======================================================================================================\n");
+            bw.write("language being tested is: "+language+"\t Test chunk size is: "+ size+"\tModel size is: "+ms);
+            bw.newLine();
+            bw.write("Predicted languages are: ");
+        }catch (IOException ex){
+            System.out.println(ex.toString());
+        }
     }
 
     void startExperiment() {
         ExecutorService es = Executors.newFixedThreadPool(languages.length);
         int i = 0;
         testingProfile.start_of_testing += ((a * testingProfile.singleDivision));
-        for (File f : languages) {
-            if (!f.getName().equals(language_being_tested)) {
-                es.submit(new NgramCreator(f, profiles[i]));
+        for (File file : languages) {
+            if (!file.getName().equals(language_being_tested)) {
+                es.submit(new ModelCreator(file, profiles[i]));
             } else {
                 testingProfile.testing_chunk_size = size;
-                es.submit(new TestModelCreator(f, profiles[i], testingProfile));
+                es.submit(new TestModelCreator(file, profiles[i], testingProfile));
             }
             i++;
         }
@@ -69,7 +101,7 @@ public class Experiment {
     }
 
     float performTesting() {
-        Pair<Profile, Integer> result = new Pair(testingProfile, Integer.MAX_VALUE);
+        Pair<Profile, Integer> result;
         float accuracy = 0;
         int i = 0;
 //        System.out.println("======================================================");
@@ -83,12 +115,26 @@ public class Experiment {
                     result = new Pair<>(p, p.compareProfiles(testingProfile));
                 }
             }
-//            System.out.println("Predicted language is: " + result.getKey().language_represented);
+            try {
+                bw.write(result.getKey().language_represented);
+                bw.write(" ");
+            } catch (IOException ex) {
+                Logger.getLogger(Experiment.class.getName()).log(Level.SEVERE, null, ex);
+            }
             if (result.getKey().language_represented.equals(language_being_tested)) {
                 accuracy++;
             }
         }
-//        System.out.println(((float)(accuracy/10)*100));
+        try {
+            bw.newLine();
+            bw.write("Precision is: "+ Float.toString((float) (accuracy / i) * 100));
+            bw.newLine();
+            bw.write("=======================================================================================================\n---End\n\n");
+            bw.flush();
+            bw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Experiment.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return (float) (accuracy / i) * 100;
     }
 }

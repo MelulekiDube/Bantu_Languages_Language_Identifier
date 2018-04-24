@@ -22,7 +22,7 @@ public class Profile {
     public int start_of_testing, singleDivision;
     public String language_represented;
     int testing_chunk_size = 0;
-
+    int num_items_in_model=0;
     /**
      * Default constructor that sets up the profile parameters
      *
