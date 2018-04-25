@@ -20,6 +20,7 @@ public class TestModelCreator implements Runnable {
     private File ngramFile;
     private Profile model_profile;
     Profile testing_profile;
+    int char_counter = 0;
 
     public TestModelCreator(File f, Profile model_profile, Profile testing_profile) {
         this.currentFile = f.listFiles()[0];
@@ -39,14 +40,12 @@ public class TestModelCreator implements Runnable {
         int tempStartTesting = testing_profile.start_of_testing;
         int tempEndTesting = testing_profile.singleDivision + tempStartTesting;
         int charecters_written_to_testing_model = 0;
-        int char_counter = 0;
         try {
             BufferedReader fileBufferedReader = new BufferedReader(new FileReader(currentFile));
             String token = fileBufferedReader.readLine();
             int count = 0;
             String testing_chunk = "";
             while (token != null) {
-                String model_chunk = "";
 //                System.out.println("Reading line: " + temp);
                 boolean write_to_test = ((count >= tempStartTesting && count < tempEndTesting));
                 char[] tempArr = token.toCharArray();
@@ -55,21 +54,14 @@ public class TestModelCreator implements Runnable {
                     for (char c : tempArr) {
                         if (charecters_written_to_testing_model <= testing_profile.testing_chunk_size) {
                             testing_chunk += c;
+//                            System.out.print(c);
                             charecters_written_to_testing_model++;
                         }
                         count++;
                         write_to_test = ((count >= tempStartTesting && count < tempEndTesting));
                         if (!write_to_test) {
                             write_to_profile(testing_chunk, "T");
-                            for (char ct : token.toCharArray()) {
-                                if (model_profile.num_items_in_model <= char_counter) {
-                                    char_counter++;
-                                    model_chunk += c;
-                                } else {
-                                    write_to_profile(model_chunk, "M");
-                                    break;
-                                }
-                            }
+                            write_to_profile(token, "M");
                             testing_chunk = "";
 //                            System.out.println(testing_chunk);
                             break;
@@ -78,10 +70,7 @@ public class TestModelCreator implements Runnable {
                 } else {
                     String model_chunk_data = "";
                     for (char c : tempArr) {
-                        if (char_counter <= model_profile.num_items_in_model) {
-                            model_chunk_data += c;
-                            char_counter++;
-                        }
+                        model_chunk_data += c;
 //                        token = token.replaceFirst(c + "", "");
                         count++;
                         write_to_test = ((count >= tempStartTesting && count < tempEndTesting));
@@ -114,7 +103,22 @@ public class TestModelCreator implements Runnable {
     }
 
     void write_to_profile(String token, String p) {
-        List<String> ngrams = ngramFromLine(token);
+        List<String> ngrams;
+        if (p.equals("M")) {
+            String modelData = "";
+            for (char c : token.toCharArray()) {
+//                System.out.println("Comparing: " + char_counter + " to " + model_profile.num_items_in_model);
+                if (char_counter <= model_profile.num_items_in_model) {
+                    char_counter++;
+                    modelData += c;
+                } else {
+                    break;
+                }
+            }
+            ngrams = ngramFromLine(modelData);
+        } else {
+            ngrams = ngramFromLine(token);
+        }
         ngrams.forEach((tempNgram) -> {
             if (p.equals("M")) {
                 model_profile.insert(tempNgram);

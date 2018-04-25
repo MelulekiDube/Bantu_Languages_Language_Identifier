@@ -1,0 +1,400 @@
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 50	Model size is: 100000
+Predicted languages are: Zulu Xhosa Zulu Ndebele Zulu Xhosa Zulu Zulu Zulu 
+Precision is: 11.111112
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 100	Model size is: 100000
+Predicted languages are: Xhosa Ndebele Zulu Zulu Ndebele Zulu Zulu Zulu Ndebele 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 150	Model size is: 100000
+Predicted languages are: Xhosa Zulu Ndebele Zulu Zulu Xhosa Ndebele Ndebele Ndebele 
+Precision is: 44.444447
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 200	Model size is: 100000
+Predicted languages are: Xhosa Zulu Ndebele Zulu Zulu Xhosa Ndebele Ndebele Ndebele 
+Precision is: 44.444447
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 250	Model size is: 100000
+Predicted languages are: Xhosa Zulu Ndebele Zulu Zulu Zulu Ndebele Zulu Ndebele 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 300	Model size is: 100000
+Predicted languages are: Xhosa Zulu Ndebele Zulu Zulu Xhosa Ndebele Xhosa Ndebele 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 350	Model size is: 100000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Zulu Ndebele Ndebele Xhosa Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 400	Model size is: 100000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Zulu Ndebele Ndebele Xhosa Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 450	Model size is: 100000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Zulu Zulu Ndebele Ndebele Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 500	Model size is: 100000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Zulu Zulu Ndebele Ndebele Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 550	Model size is: 100000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Zulu Ndebele Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 600	Model size is: 100000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Zulu Ndebele Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 650	Model size is: 100000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Zulu Zulu Ndebele Ndebele Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 700	Model size is: 100000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Zulu Zulu Ndebele Ndebele Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 750	Model size is: 100000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Zulu Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 800	Model size is: 100000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 850	Model size is: 100000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Zulu Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 900	Model size is: 100000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 950	Model size is: 100000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 1000	Model size is: 100000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 50	Model size is: 200000
+Predicted languages are: Xhosa Zulu Ndebele Ndebele Xhosa Zulu Zulu Ndebele Ndebele 
+Precision is: 44.444447
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 100	Model size is: 200000
+Predicted languages are: Zulu Zulu Zulu Zulu Xhosa Zulu Xhosa Zulu Ndebele 
+Precision is: 11.111112
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 150	Model size is: 200000
+Predicted languages are: Zulu Zulu Ndebele Zulu Ndebele Xhosa Ndebele Ndebele Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 200	Model size is: 200000
+Predicted languages are: Xhosa Zulu Ndebele Zulu Ndebele Xhosa Zulu Ndebele Ndebele 
+Precision is: 44.444447
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 250	Model size is: 200000
+Predicted languages are: Zulu Xhosa Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 300	Model size is: 200000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 350	Model size is: 200000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 400	Model size is: 200000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Xhosa Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 450	Model size is: 200000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 500	Model size is: 200000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 550	Model size is: 200000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Zulu Ndebele Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 600	Model size is: 200000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Zulu Ndebele Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 650	Model size is: 200000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Zulu Ndebele Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 700	Model size is: 200000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Zulu Zulu Ndebele Ndebele Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 750	Model size is: 200000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Zulu Zulu Ndebele Zulu Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 800	Model size is: 200000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 850	Model size is: 200000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 900	Model size is: 200000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Zulu 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 950	Model size is: 200000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Zulu 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 1000	Model size is: 200000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 50	Model size is: 300000
+Predicted languages are: Xhosa Zulu Ndebele Ndebele Xhosa Zulu Zulu Xhosa Ndebele 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 100	Model size is: 300000
+Predicted languages are: Xhosa Ndebele Zulu Zulu Ndebele Siswati Zulu Xhosa Ndebele 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 150	Model size is: 300000
+Predicted languages are: Zulu Zulu Ndebele Zulu Ndebele Zulu Zulu Ndebele Zulu 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 200	Model size is: 300000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Zulu 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 250	Model size is: 300000
+Predicted languages are: Zulu Ndebele Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 300	Model size is: 300000
+Predicted languages are: Xhosa Ndebele Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 350	Model size is: 300000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Zulu Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 400	Model size is: 300000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 450	Model size is: 300000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 500	Model size is: 300000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 550	Model size is: 300000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 600	Model size is: 300000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 650	Model size is: 300000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 700	Model size is: 300000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 750	Model size is: 300000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 800	Model size is: 300000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Zulu 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 850	Model size is: 300000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Zulu 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 900	Model size is: 300000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Zulu 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 950	Model size is: 300000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Zulu 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 1000	Model size is: 300000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 50	Model size is: 400000
+Predicted languages are: Zulu Zulu Ndebele Zulu Ndebele Zulu Ndebele Xhosa Ndebele 
+Precision is: 44.444447
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 100	Model size is: 400000
+Predicted languages are: Zulu Zulu Ndebele Ndebele Ndebele Zulu Zulu Ndebele Zulu 
+Precision is: 44.444447
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 150	Model size is: 400000
+Predicted languages are: Zulu Zulu Xhosa Zulu Ndebele Zulu Ndebele Ndebele Zulu 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 200	Model size is: 400000
+Predicted languages are: Zulu Zulu Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 250	Model size is: 400000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Siswati Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 300	Model size is: 400000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 350	Model size is: 400000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 400	Model size is: 400000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 450	Model size is: 400000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Ndebele Zulu Ndebele Ndebele Ndebele 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 500	Model size is: 400000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Zulu 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 550	Model size is: 400000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 600	Model size is: 400000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 650	Model size is: 400000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 700	Model size is: 400000
+Predicted languages are: Xhosa Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 750	Model size is: 400000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 800	Model size is: 400000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Zulu 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 850	Model size is: 400000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 900	Model size is: 400000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Zulu 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 950	Model size is: 400000
+Predicted languages are: Zulu Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Zulu 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Ndebele	 Test chunk size is: 1000	Model size is: 400000
+Predicted languages are: Ndebele Ndebele Ndebele Zulu Ndebele Ndebele Ndebele Ndebele Ndebele 
+Precision is: 88.88889
+=======================================================================================================

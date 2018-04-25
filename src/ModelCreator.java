@@ -59,10 +59,10 @@ public class ModelCreator implements Runnable {
             try (BufferedReader fileRead = new BufferedReader(new FileReader(currentFile))) {
                 String token;
                 token = fileRead.readLine();
+                String modelData = "";
                 while (token != null) {
-                    String modelData = "";
                     for (char c : token.toCharArray()) {
-                        if (char_counter <= model_profile.num_items_in_model) {
+                        if (char_counter < model_profile.num_items_in_model) {
                             char_counter++;
                             modelData += c;
                         } else {
@@ -70,6 +70,7 @@ public class ModelCreator implements Runnable {
                         }
                     }
                     write_to_profile(modelData);
+                    modelData = "";
                     token = fileRead.readLine();
                 }
             }
@@ -81,6 +82,7 @@ public class ModelCreator implements Runnable {
     /**
      * Converts the string into a list of ngrams characters and returns the
      * string
+     *
      * @param stringToConvert which is the string which is going to be converted
      * to trigrams
      * @return list of ngram characters produced from the string

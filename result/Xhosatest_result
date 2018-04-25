@@ -1,0 +1,400 @@
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 50	Model size is: 100000
+Predicted languages are: Setswana Xhosa Xhosa Ndebele Xhosa Zulu Zulu Xhosa Zulu 
+Precision is: 44.444447
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 100	Model size is: 100000
+Predicted languages are: Zulu Xhosa Siswati Xhosa Zulu Zulu Zulu Xhosa Zulu 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 150	Model size is: 100000
+Predicted languages are: Zulu Ndebele Xhosa Zulu Zulu Zulu Xhosa Xhosa Zulu 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 200	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Zulu Ndebele Xhosa Xhosa Zulu 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 250	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 300	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Zulu Ndebele Xhosa Zulu Xhosa 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 350	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Zulu Ndebele Xhosa Zulu Xhosa 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 400	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Zulu Zulu Xhosa Xhosa Xhosa 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 450	Model size is: 100000
+Predicted languages are: Zulu Xhosa Xhosa Xhosa Zulu Zulu Xhosa Xhosa Xhosa 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 500	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 550	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 600	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 650	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 700	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 750	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 800	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 850	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 900	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 950	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 1000	Model size is: 100000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 50	Model size is: 200000
+Predicted languages are: Setswana Ndebele Xhosa Ndebele Xhosa Zulu Ndebele Xhosa Zulu 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 100	Model size is: 200000
+Predicted languages are: Zulu Xhosa Siswati Zulu Xhosa Zulu Venda Xhosa Zulu 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 150	Model size is: 200000
+Predicted languages are: Zulu Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 200	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa Xhosa Ndebele 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 250	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 300	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Zulu Ndebele Xhosa Zulu Xhosa 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 350	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Ndebele Xhosa Zulu Xhosa 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 400	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 450	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Ndebele Xhosa Zulu Xhosa 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 500	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 550	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 600	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 650	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 700	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 750	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 800	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 850	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 900	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 950	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 1000	Model size is: 200000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 50	Model size is: 300000
+Predicted languages are: Setswana Ndebele Xhosa Zulu Xhosa Zulu Ndebele Xhosa Zulu 
+Precision is: 33.333336
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 100	Model size is: 300000
+Predicted languages are: Zulu Xhosa Xhosa Xhosa Zulu Zulu Venda Xhosa Zulu 
+Precision is: 44.444447
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 150	Model size is: 300000
+Predicted languages are: Zulu Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Zulu 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 200	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa Xhosa Zulu 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 250	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 300	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 350	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Siswati Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 400	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Siswati Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 450	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Zulu Siswati Xhosa Xhosa Xhosa 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 500	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 550	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 600	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 650	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 700	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 750	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 800	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 850	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 900	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 950	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 1000	Model size is: 300000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 50	Model size is: 400000
+Predicted languages are: Setswana Ndebele Xhosa Ndebele Xhosa Zulu Xhosa Xhosa Siswati 
+Precision is: 44.444447
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 100	Model size is: 400000
+Predicted languages are: Zulu Zulu Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Zulu 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 150	Model size is: 400000
+Predicted languages are: Zulu Xhosa Xhosa Zulu Zulu Zulu Xhosa Xhosa Zulu 
+Precision is: 44.444447
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 200	Model size is: 400000
+Predicted languages are: Zulu Zulu Xhosa Zulu Xhosa Xhosa Xhosa Xhosa Zulu 
+Precision is: 55.555557
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 250	Model size is: 400000
+Predicted languages are: Zulu Xhosa Xhosa Xhosa Zulu Ndebele Xhosa Xhosa Xhosa 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 300	Model size is: 400000
+Predicted languages are: Zulu Xhosa Xhosa Zulu Zulu Xhosa Xhosa Xhosa Xhosa 
+Precision is: 66.66667
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 350	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Zulu Xhosa Siswati Xhosa Xhosa Xhosa 
+Precision is: 77.77778
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 400	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 450	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 500	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 550	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 600	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 650	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 700	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 750	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Zulu Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 800	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 850	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Ndebele Xhosa Xhosa Xhosa 
+Precision is: 88.88889
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 900	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 950	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================
+=======================================================================================================
+language being tested is: Xhosa	 Test chunk size is: 1000	Model size is: 400000
+Predicted languages are: Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa Xhosa 
+Precision is: 100.0
+=======================================================================================================

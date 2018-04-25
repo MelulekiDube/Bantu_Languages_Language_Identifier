@@ -3,7 +3,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
@@ -40,13 +39,13 @@ public class Driver extends Application {
         lChart.setTitle("Accuracy vs Chunk size");
         /*Defining the series for the XYChart now*/
         XYChart.Series series[] = new XYChart.Series[5];
-        for (int i=0; i<5; i++) {
+        for (int i = 0; i < 5; i++) {
             series[i] = new XYChart.Series();
         }
         /*series to be used for the different model sizes*/
  /*Defining experiment*/
-        for (int i = 10000; i < 50000; i += 10000) {
-            populateWithData(series[(i / 10000) - 1], i);
+        for (int i = 100000; i < 500000; i += 100000) {
+            populateWithData(series[(i / 100000) - 1], i);
         }
         Scene scene = new Scene(lChart, 800, 600);
         for (int i = 0; i < 5; i++) {
@@ -73,7 +72,7 @@ public class Driver extends Application {
         series.setName("Model size: " + modelSize);
         try {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter(result, true))) {
-                bw.write("Model size is: "+modelSize+"\n\n");
+                bw.write("Model size is: " + modelSize + "\n\n");
                 File files[] = f.listFiles();
                 for (int i = 0; i < 1000; i += 50) {
                     Experiment e = null;

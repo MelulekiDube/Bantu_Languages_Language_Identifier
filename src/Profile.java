@@ -92,7 +92,7 @@ public class Profile {
     public int compareProfiles(Profile testing_profile) {
         List<String> profile_ngrams = new ArrayList<>(frequencyTable.keySet());
         List<String> testing_profile_ngrams = new ArrayList<>(testing_profile.frequencyTable.keySet());
-        int limit= (testing_profile_ngrams.size()>300) ?300:testing_profile_ngrams.size();
+        int limit= (testing_profile_ngrams.size()>=300) ?300:testing_profile_ngrams.size();
         int distance_between_profiles = 0;
         boolean found = false;
         try {

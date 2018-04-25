@@ -34,10 +34,11 @@ public class Experiment {
     BufferedWriter bw;
 
     /**
-     * 
+     *
      * @param language the language to be tested by the experiment
      * @param ts which is the test size
-     * @param ms the model size. This is the size of the models through out the model.
+     * @param ms the model size. This is the size of the models through out the
+     * model.
      */
     public Experiment(String language, int ts, int ms) {
         this.rootFile = new File(Values.DEFAULT_DIREC);
@@ -52,11 +53,11 @@ public class Experiment {
         testingProfile.start_of_testing = fd.current_start_of_test;
         for (File file : languages) {
             profiles[i] = new Profile(file.getName());
-            profiles[i].num_items_in_model=ms;
+            profiles[i].num_items_in_model = ms;
             i++;
         }
         size = ts;
-        f = new File("result/"+language+"test_result");
+        f = new File("result/" + language + "test_result");
         FileWriter fw;
         try {
             if (!f.exists()) {
@@ -70,10 +71,10 @@ public class Experiment {
             }
             bw = new BufferedWriter(fw);
             bw.write("=======================================================================================================\n");
-            bw.write("language being tested is: "+language+"\t Test chunk size is: "+ size+"\tModel size is: "+ms);
+            bw.write("language being tested is: " + language + "\t Test chunk size is: " + size + "\tModel size is: " + ms);
             bw.newLine();
             bw.write("Predicted languages are: ");
-        }catch (IOException ex){
+        } catch (IOException ex) {
             System.out.println(ex.toString());
         }
     }
@@ -105,11 +106,17 @@ public class Experiment {
         float accuracy = 0;
         int i = 0;
 //        System.out.println("======================================================");
-        for (; i < 10; i++) {
+        for (; i < 9; i++) {
             result = new Pair(testingProfile, Integer.MAX_VALUE);
             startExperiment();
 //            System.out.println("======================================================");
             for (Profile p : profiles) {
+                if (testingProfile.frequencyTable.size() == 2) {
+                    testingProfile.printFirstTen();
+                    System.out.println(testingProfile.singleDivision);
+                    System.out.println(testingProfile.start_of_testing);
+                    System.out.println(testingProfile.testing_chunk_size);
+                }
 //                System.out.println("Comparing with: " + p.language_represented + " " + p.compareProfiles(testingProfile));
                 if (p.compareProfiles(testingProfile) < result.getValue()) {
                     result = new Pair<>(p, p.compareProfiles(testingProfile));
@@ -127,9 +134,9 @@ public class Experiment {
         }
         try {
             bw.newLine();
-            bw.write("Precision is: "+ Float.toString((float) (accuracy / i) * 100));
+            bw.write("Precision is: " + Float.toString((float) (accuracy / i) * 100));
             bw.newLine();
-            bw.write("=======================================================================================================\n---End\n\n");
+            bw.write("=======================================================================================================\n");
             bw.flush();
             bw.close();
         } catch (IOException ex) {
