@@ -1,9 +1,3 @@
-zu->isiZulu
-xh->isixhosa
-ve->venda
-ts->tsonga
-st->Sesotho
-nr->Ndebele
-nso->pedi
-tn->Setswana
-ss->siswati
+This is the experiment done for to find out if it's possible to Use Ngram Models and Statics to actually Identify the South African Languages. 
+The work done is based on the paper N-Gram-Based Text Categorization by William B. Cavnar and John M. Trenkle.
+The actuall implementation will be added soon after the results are computed and it is deemed possible to do perform Identification at an acceptable Accuracy  rate
